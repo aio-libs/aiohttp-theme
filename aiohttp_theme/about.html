@@ -47,32 +47,31 @@
     {% set path = theme_codecov_button %}
 {% endif %}
 <p>
-<a href="https://codecov.io/github/{{ path }}">
+  <a href="https://codecov.io/github/{{ path }}">
     <img
-    alt="https://codecov.io/github/{{ path }}/coverage.svg?branch={{ theme_badge_branch }}"
-    src="https://codecov.io/github/{{ path }}/coverage.svg?branch={{ theme_badge_branch }}"
+      alt="https://codecov.io/github/{{ path }}/coverage.svg?branch={{ theme_badge_branch }}"
+      src="https://codecov.io/github/{{ path }}/coverage.svg?branch={{ theme_badge_branch }}"
     />
-</a>
+  </a>
 </p>
 {% endif %}
 
 {% if theme_badges %}
-{% for badge in theme_badges %}
-<p>
-  <a href="{{ badge['target'] }}">
-    <img
-      src="{{ badge['image'] }}"
-      {% if 'alt' in badge %}
-      alt="{{ badge['alt'] }}"
-      {% endif %}
-      {% if 'width' in badge %}
-      width="{{ badge['width'] }}"
-      {% endif %}
-      {% if 'height' in badge %}
-      height="{{ badge['height'] }}"
-      {% endif %}
+<ul class="badges">
+  {% for badge in theme_badges %}
+  <li><a href="{{ badge['target'] }}">
+    <img src="{{ badge['image'] }}"
+	 {%- if 'alt' in badge %}
+	 alt="{{ badge['alt'] }}"
+	 {%- endif %}
+	 {%- if 'width' in badge %}
+	 width="{{ badge['width'] }}"
+	 {%- endif %}
+	 {%- if 'height' in badge %}
+	 height="{{ badge['height'] }}"
+	 {%- endif %}
     />
-</a>
-</p>
-{% endfor %}
+  </a>
+  {% endfor %}
+</ul>
 {% endif %}

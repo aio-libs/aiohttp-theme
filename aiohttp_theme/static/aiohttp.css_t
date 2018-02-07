@@ -82,6 +82,7 @@ div.sphinxsidebar {
     width: {{ theme_sidebar_width }};
     font-size: 14px;
     line-height: 1.5;
+    height: 100%;
 }
 
 hr {
@@ -124,11 +125,15 @@ div.relations {
 div.sphinxsidebar a {
     color: {{ theme_sidebar_link }};
     text-decoration: none;
-    border-bottom: 1px dotted {{ theme_sidebar_link_underscore }};
+    border-bottom: 1px none {{ theme_sidebar_link_underscore }};
 }
 
 div.sphinxsidebar a:hover {
     border-bottom: 1px solid {{ theme_sidebar_link_underscore }};
+}
+
+div.sphinxsidebar ul.badges {
+    margin: 0;
 }
 
 div.sphinxsidebarwrapper {
@@ -153,7 +158,7 @@ div.sphinxsidebarwrapper h1.logo-name {
 }
 
 div.sphinxsidebarwrapper p.blurb {
-    margin-top: 0;
+    margin-top: 20px;
     font-style: {{ theme_description_font_style }};
 }
 
