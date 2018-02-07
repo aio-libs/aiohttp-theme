@@ -1,11 +1,14 @@
 # flake8: noqa
 
 from pygments.style import Style
-from pygments.token import Keyword, Name, Comment, String, Error, \
-     Number, Operator, Generic, Whitespace, Punctuation, Other, Literal
+from pygments.token import (Keyword, Name, Comment, String, Error,
+                            Number, Operator, Generic, Whitespace,
+                            Punctuation, Other, Literal, Token)
 
 class DigeratiStyle(Style):
-    background_color = '#444444'
+    background_color = '#424750'
+    default_style = ""
+
     styles = {
         Token:              'noinherit #f0f0f0 bg:#444444',
         Generic.Subheading: '#ffffff bold',
