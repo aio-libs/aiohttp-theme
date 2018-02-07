@@ -274,6 +274,7 @@ div.admonition {
     padding: 10px 30px;
     background-color: {{ theme_admonition_bg }};
     border: 1px solid {{ theme_admonition_border }};
+    border-radius: 3px;
 }
 
 div.admonition tt.xref, div.admonition code.xref, div.admonition a tt {
@@ -305,6 +306,7 @@ dt:target, .highlight {
 div.warning {
     background-color: {{ theme_warn_bg }};
     border: 1px solid {{ theme_warn_border }};
+    border-radius: 3px;
 }
 
 div.danger {
@@ -313,6 +315,7 @@ div.danger {
     -moz-box-shadow: 2px 2px 4px {{ theme_danger_shadow }};
     -webkit-box-shadow: 2px 2px 4px {{ theme_danger_shadow }};
     box-shadow: 2px 2px 4px {{ theme_danger_shadow }};
+    border-radius: 3px;
 }
 
 div.error {
@@ -321,41 +324,49 @@ div.error {
     -moz-box-shadow: 2px 2px 4px {{ theme_error_shadow }};
     -webkit-box-shadow: 2px 2px 4px {{ theme_error_shadow }};
     box-shadow: 2px 2px 4px {{ theme_error_shadow }};
+    border-radius: 3px;
 }
 
 div.caution {
     background-color: {{ theme_caution_bg }};
     border: 1px solid {{ theme_caution_border }};
+    border-radius: 3px;
 }
 
 div.attention {
     background-color: {{ theme_attention_bg }};
     border: 1px solid {{ theme_attention_border }};
+    border-radius: 3px;
 }
 
 div.important {
     background-color: {{ theme_important_bg }};
     border: 1px solid {{ theme_important_border }};
+    border-radius: 3px;
 }
 
 div.note {
     background-color: {{ theme_note_bg }};
     border: 1px solid {{ theme_note_border }};
+    border-radius: 3px;
 }
 
 div.tip {
     background-color: {{ theme_tip_bg }};
     border: 1px solid {{ theme_tip_border }};
+    border-radius: 3px;
 }
 
 div.hint {
     background-color: {{ theme_hint_bg }};
     border: 1px solid {{ theme_hint_border }};
+    border-radius: 3px;
 }
 
 div.seealso {
     background-color: {{ theme_seealso_bg }};
     border: 1px solid {{ theme_seealso_border }};
+    border-radius: 3px;
 }
 
 div.topic {
@@ -487,6 +498,7 @@ pre {
     padding: 7px 30px;
     margin: 15px 0px;
     line-height: 1.3em;
+    border-radius: 3px;
 }
 
 div.viewcode-block:target {
