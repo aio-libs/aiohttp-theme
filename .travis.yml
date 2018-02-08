@@ -1,24 +1,16 @@
 language: python
 cache: pip
 python:
-  - "2.7"
-  - "3.4"
-  - "3.5"
   - "3.6"
   - "pypy"
   - "pypy3"
 env:
-  - SPHINX=">=1.3,<1.4"
-  - SPHINX=">=1.4,<1.5"
-  - SPHINX=">=1.5,<1.6"
   - SPHINX=">=1.6,<1.7"
 install:
   # For some reason Travis' build envs have wildly different pip/setuptools
   # versions between minor Python versions, and this can cause many hilarious
   # corner packaging cases. So...
-  - pip install -U pip
-  # Setuptools 34+ seems to get less stable
-  - pip install 'setuptools>33,<34'
+  - pip install -U pip setuptools
   # Install dev requirements
   - pip install -r dev-requirements.txt
   # Limit Sphinx version re: test matrix
@@ -35,3 +27,13 @@ script:
   - inv docs
   # I have this in my git pre-push hook, but contributors probably don't
   - flake8
+deploy:
+  provider: pypi
+  user: andrew.svetlov
+  password:
+    secure: "XcSHQrhkJywlNizt4unWsM8P19YSBlMVEZvk3uPxidy64xnLcRyAG6FPtuKBIRGNLLm1HIdYJM7CowiSvfJnk7xM6GTxF6pS5VwrDphCFE6Sq8Fojak+1pxZQzZYjMgG6uERd/WvHDpef4OpWELb7jXjc0xt2HEVEZ6+m86vQMkshx4sHyW/NGudagWTmc44vae0ml8lW1CLP4UiS1S8jWJk85ttLvKRqifvs8A4ZR83rz9aQYYlQ8EhuZxvgmHok/bPf62Gs8R2ZVZhcRtJwo9M/apZ5zz/MuI21Err6nHSsW7ROhyBjE/I5cBdxLeMeRi3pzisdNdoUSRsItpm7icu4LCH3PWfpLFyjxIW3Sx26WmMKaOtR8rOCR3iL6Zp1pg57IyXHSKirZWgrr+XbsAaHVKcIYDY/fgv0TEIfbvM/ziTtufcsPQAGaZfGPoWz1n5HpruY9RkkdcOx+r1sT9WDocF+Pr8Ncf7zdfEjmbKHPzYWAipgZDy1MVssB+G1wdmfpiGv96WPiWVRKm/nvpU0ffW+E/HekaxKSrd/GqrwKJxrghpZCGUyV6daGIZxPCUIXkBxKsqrKqEXpu4+WjuwCorsm5nmRcYFvTNcEDDD/9+P4dPLQa/8pf1IAvVmmTQvadF92+mb3Z4cq2FTdazbIvoiGSz9wbmJW8aazQ="
+  distributions: "sdist bdist_wheel"
+  on:
+    tags: true
+    all_branches: true
+    python: 3.6
