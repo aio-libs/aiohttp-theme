@@ -295,6 +295,11 @@ div.admonition p.last {
     margin-bottom: 0;
 }
 
+
+div[class^="highlight-"] {
+    margin-top: -10px;
+}
+
 div.highlight {
     background-color: {{ theme_code_highlight_bg }};
 }
