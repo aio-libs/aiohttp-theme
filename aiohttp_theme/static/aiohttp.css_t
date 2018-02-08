@@ -223,6 +223,10 @@ div.sphinxsidebar hr {
     width: 50%;
 }
 
+form.search div {
+    display: table-cell;
+}
+
 /* -- body styles ----------------------------------------------------------- */
 
 a {
