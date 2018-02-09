@@ -1,4 +1,8 @@
 include LICENSE
-include README.md
-recursive-include alabaster *.*
+include README.rst
+recursive-include aiohttp_theme *.*
 recursive-exclude alabaster .*.swp
+include tasks.py
+global-exclude *.pyc
+global-exclude *.pyd
+global-exclude *.so
