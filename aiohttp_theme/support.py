@@ -10,7 +10,7 @@ class DigeratiStyle(Style):
     default_style = ""
 
     styles = {
-        Token:              'noinherit #f0f0f0 bg:#444444',
+        Token:              'noinherit #f0f0f0 bg:#424750',
         Generic.Subheading: '#ffffff bold',
         Name.Variable:      'noinherit #cdff00',
         Generic.Output:     'noinherit #a0a0a0 bg:#303030',
