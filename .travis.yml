@@ -2,7 +2,6 @@ language: python
 cache: pip
 python:
   - "3.6"
-  - "pypy"
   - "pypy3"
 env:
   - SPHINX=">=1.6,<1.7"
