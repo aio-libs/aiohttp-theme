@@ -3,6 +3,6 @@ invoke>=0.10.1
 invocations>=0.6.2
 semantic_version>=2.4,<2.9
 wheel==0.37.0
-twine==3.6.0
+twine==3.7.0
 releases>=1.2.0,<2.0
 flake8==4.0.1
