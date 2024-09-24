@@ -37,7 +37,6 @@ jobs:
       run: flake8
     - name: Prepare twine checker
       run: |
-        pip install -U build twine wheel
         python -m build
     - name: Run twine checker
       run: |
