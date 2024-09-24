@@ -23,6 +23,8 @@ setup(
     url='https://github.com/aio-libs/aiohttp-theme',
     packages=['aiohttp_theme'],
     include_package_data=True,
+    license="BSD License",
+    license_files="LICENSE",
     entry_points={
         'sphinx.html_themes': [
             'aiohttp_theme = aiohttp_theme',
