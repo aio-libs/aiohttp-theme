@@ -2,7 +2,7 @@ build==1.2.2
 sphinx==8.0.2
 invoke==2.2.0
 invocations==3.3.0
-semantic_version==2.10
+semantic_version==2.6.0
 wheel==0.44.0
 twine==5.1.1
 releases==2.1.1
