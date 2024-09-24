@@ -63,15 +63,11 @@ jobs:
     - name: Build dists
       run: |
         python -m build
-    - name: Make Release
-      uses: aio-libs/create-release@v1.6.6
+    - name: GitHub Release
+      uses: ncipollo/release-action@v1
       with:
-        name: aiohttp-theme
-        version_file: aiohttp_theme/__init__.py
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        dist_dir: dist
-        fix_issue_regex: "`#(\\d+) <https://github.com/aio-libs/aiohttp-theme/issues/\\1>`"
-        fix_issue_repl: "(#\\1)"
+        artifacts: dist/*
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: >-
         Publish 🐍📦 to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
