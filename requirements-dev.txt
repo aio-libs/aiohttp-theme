@@ -1,4 +1,4 @@
-build==1.2.2
+build==1.2.2.post1
 sphinx==8.0.2
 invoke==2.2.0
 invocations==3.3.0
